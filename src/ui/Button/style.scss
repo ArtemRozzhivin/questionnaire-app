@@ -1,0 +1,18 @@
+.button {
+  width: 100%;
+  background: #40bca3;
+  padding: 16px;
+  border-radius: 8px;
+  border: none;
+
+  color: #ffffff;
+  font-family: Noto Sans;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 21.79px;
+  text-align: center;
+
+  &:disabled {
+    opacity: 0.7;
+  }
+}
