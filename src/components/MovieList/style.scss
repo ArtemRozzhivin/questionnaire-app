@@ -1,0 +1,50 @@
+.list {
+  height: 700px;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-height: 1000px) {
+    height: 400px;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &__poster {
+    width: 100%;
+    border-radius: 16px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 20px;
+    color: #212121;
+    flex: 1;
+  }
+
+  &__year {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: #212121;
+  }
+}

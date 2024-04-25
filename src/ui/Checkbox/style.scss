@@ -1,24 +1,53 @@
 .checkbox {
+  display: block;
   position: relative;
-  display: flex;
-  align-items: start;
-}
+  padding-left: 20px;
+  margin-bottom: 19px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 
-.checkbox__item {
-  display: flex;
-  align-items: center;
-  height: 24px;
-}
-
-.checkbox__input {
-  &:focus {
-    color: #4f46e5; // Замість focus:ring-indigo-500
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
   }
 
-  height: 1rem;
-  width: 1rem;
-  color: #6366f1;
-  border-color: #d2d6dc;
-  border-radius: 0.375rem;
-  cursor: pointer;
+  input:checked ~ &__checkmark {
+    background-color: #40bca3;
+  }
+
+  input:checked ~ &__checkmark:after {
+    display: block;
+  }
+
+  &__checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background-color: #eee;
+
+    &:after {
+      content: '';
+      position: absolute;
+      display: none;
+      left: 8px;
+      top: 4px;
+      width: 7px;
+      height: 11px;
+      border: solid white;
+      border-width: 0 1px 1px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  }
 }

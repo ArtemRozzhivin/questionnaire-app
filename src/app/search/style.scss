@@ -1,0 +1,28 @@
+.search {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  padding: 30% 0px;
+
+  &__title {
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 30px;
+    text-align: left;
+    color: #212121;
+  }
+
+  &__loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 50% 0px;
+  }
+
+  @media (max-height: 700px) {
+    padding: 30% 0px;
+  }
+}

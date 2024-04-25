@@ -1,0 +1,39 @@
+.input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input {
+  border: 1px solid #d7dcdf;
+  border-radius: 8px;
+  padding: 20px 24px;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21.79px;
+  text-align: left;
+  color: #212121;
+
+  &:focus {
+    outline: none;
+    border: 2px solid #40bca3;
+  }
+
+  &_danger {
+    border: 1px solid #dc0000;
+    color: #dc0000;
+
+    &:focus {
+      border: 2px solid #dc0000;
+    }
+  }
+
+  &__error {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: left;
+    color: #dc0000;
+  }
+}

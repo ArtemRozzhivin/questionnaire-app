@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Noto_Sans } from 'next/font/google';
 import './globals.scss';
 
 import { Header } from '@/components/Header';
+import { AppContextProvider } from '@/components/AppContext';
 
-const inter = Inter({ subsets: ['latin'] });
+const notoSans = Noto_Sans({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Questionnaire App',
@@ -18,9 +19,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={inter.className}>
-        <Header />
-        <div>{children}</div>
+      <body className={notoSans.className}>
+        <AppContextProvider>
+          <Header />
+          <div className='wrapper'>{children}</div>
+        </AppContextProvider>
       </body>
     </html>
   );

@@ -2,10 +2,11 @@ $progress-bg-color: #ffffff;
 $progress-bar-color: #4ad6bb;
 
 .header {
-  background: url('../../img/head-background.png') no-repeat center;
+  background: url('../../img/frame.png') no-repeat center/70% 110%;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0px 40px;
 
   &__wrapper {
     width: 100%;
@@ -13,7 +14,7 @@ $progress-bar-color: #4ad6bb;
     padding: 16px 0px 24px 0px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 13px;
     justify-content: center;
     align-items: center;
   }
@@ -31,14 +32,19 @@ $progress-bar-color: #4ad6bb;
     align-items: center;
   }
 
-  @media (max-width: 430px) {
-    background: url('../../img/head-background-sm.png') no-repeat center;
+  @media (max-width: 1200px) {
+    background: url('../../img/frame.png') no-repeat center/105% 110%;
+  }
+
+  @media (max-width: 750px) {
+    background: url('../../img/frame-sm.png') no-repeat center/100% 100%;
   }
 }
 
 .progress {
   background-color: $progress-bg-color;
   height: 4px;
+  margin-bottom: 4px;
   width: 100%;
   border-radius: 2px;
   overflow: hidden;

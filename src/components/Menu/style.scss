@@ -1,0 +1,27 @@
+.dropdown {
+  position: relative;
+
+  &__open {
+    background-color: #ffffff;
+    padding: 10px;
+    border: 1px solid #adadad;
+    border-radius: 5px;
+    position: absolute;
+    top: 110%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__option {
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%;
+
+    &:hover {
+      background-color: #f5f5f5;
+    }
+  }
+}

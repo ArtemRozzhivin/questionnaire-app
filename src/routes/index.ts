@@ -1,7 +1,8 @@
 const routes = Object.freeze({
   main: '/',
-  quiz: '/quiz',
   search: '/search',
+  movies: '/search/movies',
+  noFound: '/search/no-found',
 });
 
 export default routes;

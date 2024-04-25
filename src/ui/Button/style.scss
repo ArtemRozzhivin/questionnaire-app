@@ -3,10 +3,10 @@
   background: #40bca3;
   padding: 16px;
   border-radius: 8px;
+  cursor: pointer;
   border: none;
 
   color: #ffffff;
-  font-family: Noto Sans;
   font-size: 16px;
   font-weight: 600;
   line-height: 21.79px;
@@ -14,5 +14,17 @@
 
   &:disabled {
     opacity: 0.7;
+    color: #a0ded1;
+    cursor: not-allowed;
+  }
+
+  &__noBorder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    background: transparent;
+    border: none;
+    padding: 0;
   }
 }
